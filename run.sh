@@ -1,7 +1,7 @@
 #!/bin/bash
 # 1 GPU on 1 node
 SIZE_MIN=8
-SIZE_MAX=128
+SIZE_MAX=128M
 NCCL_SOCKET_IFNAME=bond0.100 /home/jps/anaconda3/envs/nccl-tests/bin/mpirun \
 -x NCCL_SOCKET_IFNAME --hostfile hosts -np 1 \
 --mca oob_tcp_if_include bond0.100 --mca btl_tcp_if_include bond0.100 \
